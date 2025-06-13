@@ -1,4 +1,4 @@
-package com.dongge.test1;
+package com.dongge.dgmod;
 
 import java.util.List;
 import java.util.Set;

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 0.3,
+  "group": "bismuth",
+  "ingredient": {
+    "item": "dgmod:bismuth_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "dgmod:bismuth"
+  }
+}

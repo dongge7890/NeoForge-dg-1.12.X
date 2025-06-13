@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dgmod:block/magic_block"
+    }
+  }
+}

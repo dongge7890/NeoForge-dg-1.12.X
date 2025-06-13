@@ -1,0 +1,16 @@
+{
+  "item.dgmod.bismuth": "铋",
+  "item.dgmod.raw_bismuth": "未冶炼的铋",
+  "item.dgmod.shit": "屎",
+  "item.dgmod.chisel": "凿子",
+
+  "block.dgmod.magic_block": "魔法方块",
+
+  "block.dgmod.bismuth_block": "铋块",
+  "block.dgmod.bismuth_ore": "铋矿石",
+  "block.dgmod.bismuth_deepslate_ore": "铋深层矿石",
+
+
+  "creativetab.dgmod.bismuth_items": "铋-物品",
+  "creativetab.dgmod.bismuth_blocks": "铋-方块"
+}
