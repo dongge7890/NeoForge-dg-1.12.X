@@ -2,6 +2,7 @@ package com.dongge.dgmod.block.custom;
 
 import com.dongge.dgmod.block.ModBlocks;
 import com.dongge.dgmod.item.ModItems;
+import com.dongge.dgmod.util.ModTags;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -15,8 +16,10 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -83,41 +86,50 @@ public class MagicBlock extends Block {
 
 
     @Override
-public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
-    if (entity instanceof ItemEntity itemEntity) {
-        if (itemEntity.getItem().getItem() == ModItems.RAW_BISMUTH.get()) {
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
+        if (entity instanceof ItemEntity itemEntity) {
+            if (isValidItem(itemEntity.getItem())) {
 
-            level.scheduleTick(pos, this, 20); // 40 ticks = 2 seconds
-            // 生成闪电
-            LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
-            if (lightning != null) {
-                lightning.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
-                level.addFreshEntity(lightning);
+                level.scheduleTick(pos, this, 20); // 40 ticks = 2 seconds
+                // 生成闪电
+                LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
+                if (lightning != null) {
+                    lightning.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+                    level.addFreshEntity(lightning);
+                }
+
+                // 显示爆炸粒子效果
+                for (int i = 0; i < 30; i++) {
+                    double motionX = level.random.nextGaussian() * 0.1;
+                    double motionY = level.random.nextGaussian() * 0.1;
+                    double motionZ = level.random.nextGaussian() * 0.1;
+
+                    level.addParticle(ParticleTypes.EXPLOSION,
+                            pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                            motionX, motionY, motionZ);
+                }
+                // 播放雷声
+                level.playSound(null, pos, SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.WEATHER, 1.0F, 1.0F);
+
+
+
             }
+            if (itemEntity.getItem().getItem() == Items.DANDELION) {
 
-            // 显示爆炸粒子效果
-            for (int i = 0; i < 30; i++) {
-                double motionX = level.random.nextGaussian() * 0.1;
-                double motionY = level.random.nextGaussian() * 0.1;
-                double motionZ = level.random.nextGaussian() * 0.1;
-
-                level.addParticle(ParticleTypes.EXPLOSION,
-                        pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-                        motionX, motionY, motionZ);
+                itemEntity.setItem(new ItemStack(Items.WITHER_ROSE, itemEntity.getItem().getCount()));
             }
-            // 播放雷声
-            level.playSound(null, pos, SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.WEATHER, 1.0F, 1.0F);
-
-
-
         }
-        if (itemEntity.getItem().getItem() == Items.DANDELION) {
 
-            itemEntity.setItem(new ItemStack(Items.WITHER_ROSE, itemEntity.getItem().getCount()));
-        }
+        super.stepOn(level, pos, state, entity);
     }
 
-    super.stepOn(level, pos, state, entity);
-}
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
+    }
 
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.dgmod.magic_block.tooltip"));
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+    }
 }

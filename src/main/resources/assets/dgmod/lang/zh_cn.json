@@ -3,6 +3,10 @@
   "item.dgmod.raw_bismuth": "未冶炼的铋",
   "item.dgmod.shit": "屎",
   "item.dgmod.chisel": "凿子",
+  "item.dgmod.frostfire_ice": "冰与火之冰",
+  "item.dgmod.starlight_ashes": "星光灰烬",
+
+  "item.dgmod.radish": "萝卜",
 
   "block.dgmod.magic_block": "魔法方块",
 
@@ -12,5 +16,13 @@
 
 
   "creativetab.dgmod.bismuth_items": "铋-物品",
-  "creativetab.dgmod.bismuth_blocks": "铋-方块"
+  "creativetab.dgmod.bismuth_blocks": "铋-方块",
+
+  "tooltip.dgmod.magic_block.tooltip": "这个方块似乎存在某种§9魔力§r",
+
+  "tooltip.dgmod.chisel.shift_down": "可以将物块凿成砖块",
+  "tooltip.dgmod.chisel": "按 §eShift§r 了解更多信息",
+
+  "tooltip.dgmod.radish.tooltip": "味道真的很棒！"
+
 }

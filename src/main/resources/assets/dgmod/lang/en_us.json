@@ -4,6 +4,11 @@
   "item.dgmod.raw_bismuth": "Raw Bismuth",
   "item.dgmod.shit": "Shit",
   "item.dgmod.chisel": "Chisel",
+  "item.dgmod.frostfire_ice": "Frostfire Ice",
+  "item.dgmod.starlight_ashes": "Starlight Ashes",
+
+  "item.dgmod.radish": "Radish",
+
 
   "item.dgmod.magic_block": "Magic Block",
 
@@ -12,5 +17,13 @@
   "block.dgmod.bismuth_deepslate_ore": "Bismuth Deepslate Ore",
 
   "creativetab.dgmod.bismuth_items": "Bismuth Items",
-  "creativetab.dgmod.bismuth_blocks": "Bismuth Blocks"
+  "creativetab.dgmod.bismuth_blocks": "Bismuth Blocks",
+
+  "tooltip.dgmod.magic_block.tooltip": "This Block is very §9MAGICAL§r",
+
+  "tooltip.dgmod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
+  "tooltip.dgmod.chisel": "Press §eShift§r for more Information",
+
+  "tooltip.dgmod.radish.tooltip": "Tastes really great!"
+
 }
