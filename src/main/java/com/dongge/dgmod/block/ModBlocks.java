@@ -3,7 +3,6 @@ package com.dongge.dgmod.block;
 import com.dongge.dgmod.block.custom.MagicBlock;
 import com.dongge.dgmod.dgmod;
 import com.dongge.dgmod.item.ModItems;
-import com.mojang.blaze3d.shaders.Uniform;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
