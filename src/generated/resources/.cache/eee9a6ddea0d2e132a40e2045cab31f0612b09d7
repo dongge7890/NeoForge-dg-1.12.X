@@ -1,0 +1,13 @@
+// 1.21.1	2025-06-15T21:32:33.662574	Block States: dgmod
+2bfbbd5d4456f4ee7c5642c2ef71373306a892d4 assets/dgmod/blockstates/bismuth_block.json
+f5618be5cda7346a1b4590c1b9911d086afe859e assets/dgmod/blockstates/bismuth_deepslate_ore.json
+59cc831a42f4f94e111fe9052b193bc27d37b08f assets/dgmod/blockstates/bismuth_ore.json
+80634dfdbeb9ff5e9ce30e8b2a0f66f9bb1535f6 assets/dgmod/blockstates/magic_block.json
+847a34ad23eddd48d1f293a9eb876cab6f5f2c01 assets/dgmod/models/block/bismuth_block.json
+2d40b21a2b49f3c139af5d32f79e3e07eaff88a7 assets/dgmod/models/block/bismuth_deepslate_ore.json
+ed325abd35d93b61990e6d5bce8396f14e9bbcd1 assets/dgmod/models/block/bismuth_ore.json
+9429e270bb0879eac5f7f69ee90e7848a49bbb98 assets/dgmod/models/block/magic_block.json
+551094411a0d26951d672681403ef725c3430d6b assets/dgmod/models/item/bismuth_block.json
+09982ee7e081a3fd1018042ebaeb330c9a7197a4 assets/dgmod/models/item/bismuth_deepslate_ore.json
+fa2cf1c100df99d15b825dae36437971a58a807b assets/dgmod/models/item/bismuth_ore.json
+a3d70f63a7f1cafbf21b80148d2f0672ff7143c8 assets/dgmod/models/item/magic_block.json

@@ -1,0 +1,10 @@
+{
+  "values": {
+    "dgmod:frostfire_ice": {
+      "burn_time": 2400
+    },
+    "dgmod:starlight_ashes": {
+      "burn_time": 1200
+    }
+  }
+}

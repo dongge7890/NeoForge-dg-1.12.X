@@ -1,0 +1,4 @@
+// 1.21.1	2025-06-15T21:12:39.1630492	Loot Tables
+715561bc80f8b16ffd06b5ccbfe71814d3affecf data/dgmod/loot_table/blocks/bismuth_block.json
+ed2dee61762e14974a2cd177d39da38d2bba8bf4 data/dgmod/loot_table/blocks/bismuth_deepslate_ore.json
+17dc29e91752d21a8b7c67dfef942b8839b2e65c data/dgmod/loot_table/blocks/bismuth_ore.json

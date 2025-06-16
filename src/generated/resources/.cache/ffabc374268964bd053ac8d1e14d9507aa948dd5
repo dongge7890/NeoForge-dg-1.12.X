@@ -1,0 +1,3 @@
+// 1.21.1	2025-06-15T21:46:23.0792211	Tags for minecraft:block mod id dgmod
+2c34d70c47d66981610c7fb03d0167317a302b17 data/minecraft/tags/block/mineable/pickaxe.json
+fcae50230945fe634b141f3b405480bcdb5905b3 data/minecraft/tags/block/needs_iron_tool.json
